@@ -1,6 +1,9 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
-#Include lib\AHK-Virtual-Desktop-Library\Main.ahk
+
+SetWorkingDir, %A_ScriptDir%
+#Include %A_ScriptDir%\configs\komorebi.ahk
+
 
 
 
@@ -77,35 +80,12 @@ return
     Gosub, SetTransparency
 return
 
-;always on top
 
-#^SPACE::  Winset, Alwaysontop, , A
+!^m::Run, sndvol
 
 
-; move between virtual desktops
+; horizontal scrolling
+!WheelDown::WheelRight
+!WheelUp::WheelLeft
 
-!1::GoToDesktop(1)
-!2::GoToDesktop(2)
-!3::GoToDesktop(3)
-!4::GoToDesktop(4)
-!5::GoToDesktop(5)
-!6::GoToDesktop(6)
-!7::GoToDesktop(7)
-!8::GoToDesktop(8)
-!9::GoToDesktop(9)
 
-; move windows between virtual desktops
-
-!+1::MoveCurrentWindowToDesktop(1)
-!+2::MoveCurrentWindowToDesktop(2)
-!+3::MoveCurrentWindowToDesktop(3)
-!+4::MoveCurrentWindowToDesktop(4)
-!+5::MoveCurrentWindowToDesktop(5)
-!+6::MoveCurrentWindowToDesktop(6)
-!+7::MoveCurrentWindowToDesktop(7)
-!+8::MoveCurrentWindowToDesktop(8)
-!+9::MoveCurrentWindowToDesktop(9)
-
-; open and close desktop manager
-
-!^e::DesktopManager() 
