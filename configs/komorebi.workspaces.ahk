@@ -11,10 +11,10 @@ SetWorkingDir, %A_ScriptDir%
 ; ---------------------------------------------------------------------------------
 
 ; Workspace Padding
-wPadding = 0-
+wPadding = 0
 
 ; Container Padding
-cPadding = 5
+cPadding = 0
 
 ; Default Workspace Layout
 Layout = "bsp"

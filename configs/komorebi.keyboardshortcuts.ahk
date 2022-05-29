@@ -156,18 +156,36 @@ return
 FocusMonitor(1)
 return
 
-; Move window to monitor
-; Win + shift + [12]
-#+2::
+
+;monitors
+
+; focus
+
+; left monitor
+^]::
+FocusMonitor(0)
+return
+
+; right monitor
+^[::
+FocusMonitor(1)
+return
+
+; send to mintor
+
+; left monitor
+!^]::
 MoveToMonitor(0)
 return
 
-#+1::
+; right monitor
+!^[::
 MoveToMonitor(1)
 return
 
-    ; send-to-monitor-workspace
-    ; focus-monitor-workspace
+
+
+
 
 ; Switch to workspace
 ; Alt + #
